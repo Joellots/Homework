@@ -1,0 +1,12 @@
+def my_func(usr_input: list):
+    usr_output = {}
+    for tup in usr_input:
+        if tup[0] not in usr_output.keys():
+            usr_output[tup[0]] = [tup[1]]
+        else:
+            usr_output[tup[0]].append(tup[1])
+    return usr_output
+
+if __name__ == '__main__':
+    usr_input =  [("a", 1), ("b", 2), ("a", 3), ("b", 4)]
+    print(my_func(usr_input))
